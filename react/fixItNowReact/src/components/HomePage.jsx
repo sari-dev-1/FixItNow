@@ -34,7 +34,7 @@ const HomePage = () => {
     return (
         <Layout
             style={{
-                minHeight: '100vh',
+                minHeight: '85vh',
                 width: '100vw',
                 padding: 0,
                 display: 'flex',
@@ -44,7 +44,7 @@ const HomePage = () => {
                 background:'rgb(226, 226, 226)',
             }}
         >
-            <Header />
+            {/* <Header /> */}
             <Content
                 style={{
                     flex: '1 0 auto',
