@@ -18,17 +18,17 @@ const TicketSchema = new Schema({
     default: 'open'
   },
   createdBy: {
-    type: String, // email של המשתמש שיצר
+    type: String, 
     required: true
   },
   assignedTo: {
-    type: String, // יכול להיות email של תומך/מפתח
+    type: String,
     default: null
   },
   responses: [
     {
       message: String,
-      by: String, // email או שם
+      by: String, 
       at: { type: Date, default: Date.now }
     }
   ]
