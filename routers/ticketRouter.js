@@ -8,7 +8,7 @@ const {
     getAllOpenTickets
 } = require('../controllers/ticketController');
 
-const authenticate = require('../middleware/authMiddleware');
+// const authenticate = require('../middleware/auth');
 
 router.post('/', authenticate, addTicket);
 

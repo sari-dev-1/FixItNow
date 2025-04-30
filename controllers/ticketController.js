@@ -1,13 +1,13 @@
 const Ticket = require('../models/ticketModel'); 
 async function addTicket(req, res) {
     try {
-        const { title, description, status = 'open', createdBy, assignedTo, responses = [] } = req.body;
+        const { description, status = 'open', createdBy, assignedTo, responses = [] } = req.body;
 
-        if (!title || !description || !createdBy) {
+        if (  !description || !createdBy) {
             return res.status(400).json({ message: 'Missing required fields: title, description, or createdBy' });
         }
 
-        const ticket = new Ticket({ title, status, description, createdBy, assignedTo, responses });
+        const ticket = new Ticket({  status, description, createdBy, assignedTo, responses });
         await ticket.save();
 
         res.status(201).json(ticket);

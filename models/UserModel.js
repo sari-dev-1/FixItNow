@@ -60,7 +60,6 @@ UserSchema.methods.comparePassword = function (candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-UserSchema.index({ email: 1 });
 UserSchema.index({ username: 1 });
 
 module.exports = model("User", UserSchema);

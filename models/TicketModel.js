@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const TicketModel = mongoose.Schema({
+const TicketModel =new mongoose.Schema({
     description: { type: String, required: true },
     status: {
         type: String,
@@ -12,4 +12,4 @@ const TicketModel = mongoose.Schema({
     responses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Response' }]
 }, { timestamps: true });
 
-module.exports = mongoose.model("Ticket", TicketModel);
+module.exports = mongoose.models.Ticket || mongoose.model("Ticket", TicketModel);
